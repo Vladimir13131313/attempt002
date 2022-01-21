@@ -1,0 +1,20 @@
+.modal-container-common {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.close-button {
+  margin-top: 24px;
+  margin-right: 24px;
+  margin-left: auto;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 26px 160px 80px 160px;
+}
