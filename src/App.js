@@ -1,13 +1,17 @@
 import './App.css';
+import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import {Homepage} from "./components/Homepage";
-import {Truck} from "./components/Homepage/Truck/Truck";
+import {MainContent} from './components/MainContent/MainContent'
 
 
 function App() {
   return (
       <div className="all_container">
-        <Homepage />
-          <Truck/>
+        <Routes>
+            <Route path="/" element={<Homepage/>}/>
+            <Route path="/stores" element={<MainContent></MainContent>}/>
+            <Route path="*" element={<Navigate to="/"/>} />
+        </Routes>
       </div>
   );
 }

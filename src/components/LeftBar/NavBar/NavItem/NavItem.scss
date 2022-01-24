@@ -1,0 +1,21 @@
+
+.nav_link {
+  padding: 0 0 0 34px;
+  list-style-type: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: rgba(62, 76, 89, 0.7);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32px;
+  cursor: pointer;
+}
+
+.nav_link_name {
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

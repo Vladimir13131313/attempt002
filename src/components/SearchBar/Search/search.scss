@@ -1,0 +1,28 @@
+#search_place {
+  margin: 32px auto auto 48px;
+  width: 300px;
+  height: 50px;
+  border: 1px solid #ECEFF2;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+}
+
+#search_icon {
+  margin: 16px 9px auto 16px;
+  cursor: pointer;
+}
+
+#search {
+  width: 259px;
+  border: none;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #3E4C59;
+}
+
+#search:focus {
+  outline: none;
+}

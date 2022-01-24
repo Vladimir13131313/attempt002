@@ -1,8 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './FormInput.scss';
 
 export const FormInput = (
-    {labelTxt, plcHolder, inputType, inputValue, setInputValue, inputName, inputBlur, errorClass}
+    {labelTxt, plcHolder, inputType, inputValue, setInputValue,
+        inputName, inputBlur, error
+    }
 ) => {
     return (
         <div className="input_block">
@@ -12,7 +14,7 @@ export const FormInput = (
                 value={inputValue}
                 onChange={setInputValue}
                 onBlur={inputBlur}
-                className={errorClass+" input_form modal_inputs "}
+                className={error[inputName]? "error-input input_form modal_inputs" : " input_form modal_inputs"}
                 name={inputName}
                 placeholder={plcHolder}
             />

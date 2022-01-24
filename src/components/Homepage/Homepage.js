@@ -1,30 +1,36 @@
 import React, {useState} from "react";
 import './Homepage.scss';
 import {InfoPart} from "./InfoPart/InfoPart";
+import { useNavigate } from 'react-router-dom';
 import LogInPart from "./LogInPart/LogInPart";
 import {ModalWindow} from "../Modals";
 import {AuthForm} from "../Forms/authForm";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import {Truck} from "./Truck/Truck";
 
 
 export const Homepage = () => {
     const [openModalLogin, setOpenModalLogin] = useState(false);
     const [openModalSignup, setOpenModalSignup] = useState(false);
-    const [errEm, setErrEm] = useState('');
-    const [errPas, setErrPas] = useState('');
+    const navigate = useNavigate();
+    const person = "person";
 
     function openLogin () {
         setOpenModalLogin(true);
     }
     function closeLogin () {
         setOpenModalLogin(false)
+        formik.values.email = ''
+        formik.values.password = ''
     }
     function openSignup () {
         setOpenModalSignup(true);
     }
     function closeSignup () {
         setOpenModalSignup(false)
+        formik.values.email = ''
+        formik.values.password = ''
     }
     function openOtherOne () {
         if (openModalLogin) {
@@ -44,22 +50,24 @@ export const Homepage = () => {
         validationSchema: Yup.object({
             email: Yup.string()
                 .email('Invalid email address')
-                .required('Required'),
+                .required('Email must be entered'),
             password: Yup.string()
-                .min(6, "Must be 15 characters or less")
-                .required('Required'),
+                .min(6, "Must be 6 characters or more")
+                .required('Password must be entered'),
         }),
         onSubmit: values => {
-            console.log(formik.errors)
-            if (formik.touched.email && formik.errors.email) {
-                setErrEm("error-input")
-            }
-            if (formik.touched.password && formik.errors.password) {
-                setErrPas("error-input")
+            if (openModalSignup) {
+                localStorage.setItem(person, JSON.stringify({email: values.email, password: values.password}));
+            } else if (openModalLogin) {
+                let checkPerson = JSON.parse(localStorage.getItem(person));
+                if (values.email === checkPerson.email) {
+                    if (values.password === checkPerson.password) {
+                        navigate("/stores")
+                    }
+                }
             }
         },
     });
-
     return (
         <div className="homepage">
             <InfoPart/>
@@ -70,21 +78,23 @@ export const Homepage = () => {
                     formHeader="Log in"
                     whereTo="Create one"
                     openOtherForm={openOtherOne}
-                    btnAction={formik.handleSubmit}
-                    valEmail={formik.values.email}
-                    setEmail={formik.handleChange}
-                    valPassword={formik.values.password}
-                    setPassword={formik.handleChange}
                     emailName="email"
                     passwordName="password"
-                    inputBlur={formik.handleBlur}
-                    errorEmail={errEm}
-                    errorPassword={errPas}
+                    formik={formik}
                 />
             </ModalWindow>
             <ModalWindow open={openModalSignup} close={closeSignup}>
-                <AuthForm haveAcc="Already have an account?" formHeader="Sign up" whereTo="Log in" openOtherForm={openOtherOne} btnAction={formik.handleSubmit}/>
+                <AuthForm
+                    haveAcc="Already have an account?"
+                    formHeader="Sign up"
+                    whereTo="Log in"
+                    openOtherForm={openOtherOne}
+                    emailName="email"
+                    passwordName="password"
+                    formik={formik}
+                />
             </ModalWindow>
+            <Truck/>
         </div>
     )
 }
