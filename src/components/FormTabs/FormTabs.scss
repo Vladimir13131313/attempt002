@@ -1,0 +1,45 @@
+.TabsListUnstyled-root {
+  display: flex;
+  flex-direction: row;
+  .tab-line {
+    width: 39px;
+    height: 0;
+    border-bottom: 1px solid #E6E8EA;
+    margin: auto 8px;
+  }
+}
+
+.TabUnstyled-root {
+  border: none;
+  background-color: #E6E8EA;
+  border-radius: 50%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  width: 32px;
+  height: 32px;
+}
+
+.Mui-selected {
+  background-color: #EE950F;
+  color: #fff;
+}
+
+.TabPanelUnstyled-root {
+  margin-top: 40px;
+}
+
+.tab-title {
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 36px;
+  margin-bottom: 40px;
+}
+.TabPanelUnstyled-root {
+  width: 300px;
+  margin-right: auto;
+  margin-left: auto;
+}

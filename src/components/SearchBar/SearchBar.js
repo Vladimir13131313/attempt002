@@ -6,13 +6,13 @@ import notification from '../../assets/images/Notification.svg';
 import './SearchBar.scss';
 
 
-export const SearchBar = () => {
+export const SearchBar = ({func}) => {
     return (
         <div className="main_bar">
             <Search/>
             <ul className="setting_bar">
                 <li className="top_bar_link">
-                    <img src={profile} alt="profile_icon"/>
+                    <img onClick={func} src={profile} alt="profile_icon"/>
                 </li>
                 <li className="top_bar_link">
                     <img src={setting} alt="setting_icon"/>

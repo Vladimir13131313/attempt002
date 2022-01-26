@@ -10,7 +10,7 @@ import * as Yup from 'yup';
 import {Truck} from "./Truck/Truck";
 
 
-export const Homepage = () => {
+export const Homepage = ({func}) => {
     const [openModalLogin, setOpenModalLogin] = useState(false);
     const [openModalSignup, setOpenModalSignup] = useState(false);
     const navigate = useNavigate();
@@ -56,6 +56,7 @@ export const Homepage = () => {
                 .required('Password must be entered'),
         }),
         onSubmit: values => {
+            func()
             if (openModalSignup) {
                 localStorage.setItem(person, JSON.stringify({email: values.email, password: values.password}));
             } else if (openModalLogin) {

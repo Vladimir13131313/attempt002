@@ -5,74 +5,59 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="61807a35-8343-4962-9309-4faa44778e79" name="Changes" comment="commit">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/Inter-VariableFont_slnt,wght.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/OFL.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/README.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Black.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Bold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-ExtraBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-ExtraLight.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Light.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Medium.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-SemiBold.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/fonts/Inter/static/Inter-Thin.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/2 User.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/AccountSelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Category.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/CategorySelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Chart.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/ChartSelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Chat.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/ChatSelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Document.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/DocumentSelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Group 36552.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Home.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/HomeSelected.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Notification.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Profile.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Rectangle 1384.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Search.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/Setting.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/close.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/moving_cargo_pattern.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/success_cargo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/assets/images/track.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/LeftBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/LeftBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainContent/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/Search/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/Search/Search.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/Search/search.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/Index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/WarehousePage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/warehousePage.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/carBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cardBtn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cashBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/planeBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/seaBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ChoosingMethodForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ChosingMethodForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/ContentPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/ContentPanel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/DropdownButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/DropdownButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/FormTabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/FormTabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/StepperForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/StepperForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/SuccessForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/SuccessForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/RadioButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/RadioButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/AddForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/AddForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Forms/AuthForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/AuthForm.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Forms/authForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/authForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage/Homepage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Homepage/Truck/Index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage/Truck/Index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Input/FormInput.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Input/FormInput.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainContent/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainContent/MainContent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WarehousePage/WarehousePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WarehousePage/WarehousePage.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +74,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="develop" />
+        <entry key="$PROJECT_DIR$" value="homepage" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -101,6 +86,13 @@
       <filtered-out-file-type name="TAG" />
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/ChosingMethodForm/ChoosingMethodForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Button/Button.js" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -117,13 +109,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../attempt1" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -146,6 +138,11 @@
       <workItem from="1642747859881" duration="27857000" />
       <workItem from="1642784215666" duration="34000" />
       <workItem from="1643008218463" duration="20449000" />
+      <workItem from="1643039780013" duration="4000" />
+      <workItem from="1643092869585" duration="29322000" />
+      <workItem from="1643124713783" duration="2000" />
+      <workItem from="1643124724152" duration="2000" />
+      <workItem from="1643178796356" duration="29674000" />
     </task>
     <task id="LOCAL-00001" summary="commit">
       <created>1642748230796</created>
