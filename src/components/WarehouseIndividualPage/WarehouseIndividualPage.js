@@ -1,18 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
+import * as Yup from 'yup';
+import { useFormik } from 'formik';
+
 import {Table} from './Table/Table';
 import {ContentPanel} from '../ContentPanel/ContentPanel';
-import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import {ModalWindow} from '../Modals/Modal';
 import {SuccessForm} from '../SuccessForm/SuccessForm';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
-import successPic from '../../assets/images/success_cargo.png';
 import {MoveCargoForm} from './MoveCargoForm/MoveCargoForm';
-
 import {FormTabs} from'../FormTabs/FormTabs';
 import {AddCargoForm} from './AddCargoForm/AddCargoForm';
 import {ChoosingMethodForm} from '../ChosingMethodForm/ChoosingMethodForm';
+import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
+
 import planeBtn from '../../assets/images/planeBtn.svg';
 import planeBtnOrange from '../../assets/images/planeBtnOrange.svg';
 import seaBtn from '../../assets/images/seaBtn.svg';
@@ -29,10 +29,12 @@ import planePic from '../../assets/images/Group 36487.svg';
 import shipPic from '../../assets/images/Group 36486.svg';
 import carPic from '../../assets/images/Group 36485.svg'
 import movingCargoPic from '../../assets/images/moving_cargo_pattern.png'
-
+import successPic from '../../assets/images/success_cargo.png';
 
 
 export const WarehouseIndividualPage = ({func, setId, contentList, setContentList, openMoveModal, closeMoveModal}) => {
+    const {id} = useParams();
+
     const [openModal, setOpenModal] = useState(false);
     const [successModal, setSuccessModal] = useState(false);
     const [successfullyMoved, setSuccessfullyMoved] = useState(false)
@@ -52,6 +54,17 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         secondStep: true,
         thirdStep: true,
     });
+    const [shipmentMethod, setShipmentMethod] = useState({
+        plane: false,
+        sea: false,
+        car: false,
+    });
+    const [paymentMethod, setPaymentMethod] = useState({
+        card: false,
+        paypal: false,
+        cash: false,
+    });
+
     const shipmentButtonList = [
         {
             pic: planeButtonPic,
@@ -80,21 +93,54 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
             func: paymentByCash,
         },
     ];
-    const [shipmentMethod, setShipmentMethod] = useState({
-        plane: false,
-        sea: false,
-        car: false,
-    });
-    const [paymentMethod, setPaymentMethod] = useState({
-        card: false,
-        paypal: false,
-        cash: false,
-    });
-    const {id} = useParams();
     const warehouses = "warehouses"
     let allWarehouses = [];
     const productData = 'product data';
     const newWayToTransfer = "new way to transfer"
+    const headers = [
+        "All products",
+        "Manufacturer",
+        "Item number",
+        "Purchasing technology",
+        "Shipment method"
+    ]
+    const formTitles = [
+        "Adding a product",
+        "Shipping method",
+        "Payment method"
+    ]
+
+    const formik = useFormik({
+        initialValues: {
+            name: '',
+            manufacturer: '',
+            number: '',
+        },
+        validationSchema: Yup.object({
+            name: Yup.string()
+                .required('Name must be entered'),
+            manufacturer: Yup.string()
+                .required('Name must be entered'),
+            number: Yup.string()
+                .required('Name must be entered'),
+        }),
+        onSubmit: values => {
+            let data = {};
+            data.name = values.name;
+            data.manufacturer = values.manufacturer;
+            data.number = values.number;
+            data.purchase = radioValue;
+            setActiveStep(3);
+            setDisabled({
+                firstStep: true,
+                secondStep: false,
+                thirdStep: true,
+            });
+            localStorage.setItem(productData, JSON.stringify(data))
+        },
+    });
+
+    processData();
 
     useEffect(() => {
         uncheckAll();
@@ -105,23 +151,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
     function processData () {
         allWarehouses = JSON.parse(localStorage.getItem(warehouses));
     }
-
-    processData();
-
-
-    const headers = [
-        "All products",
-        "Manufacturer",
-        "Item number",
-        "Purchasing technology",
-        "Shipment method"
-    ]
-
-    const formTitles = [
-        "Adding a product",
-        "Shipping method",
-        "Payment method"
-    ]
 
     function openModalWindow () {
         setOpenModal(true)
@@ -185,7 +214,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         parseProductList();
 
     }
-
     function checkAll() {
         let listOfAll = JSON.parse(localStorage.getItem(warehouses));
         if (listOfAll[id].products.length !== 0) {
@@ -216,7 +244,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
             parseProductList();
         }
     }
-
     function countChecked() {
         let listOfAll = JSON.parse(localStorage.getItem(warehouses));
         let count = 0;
@@ -230,12 +257,10 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         }
         return {len: 0, current: count}
     }
-
     function openPanel(open) {
         const count = countChecked();
         func(count.current, open)
     }
-
     function uncheckAll() {
         let listOfAll = JSON.parse(localStorage.getItem(warehouses));
         if (listOfAll[id].products) {
@@ -249,37 +274,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         }
     }
 
-    const formik = useFormik({
-        initialValues: {
-            name: '',
-            manufacturer: '',
-            number: '',
-        },
-        validationSchema: Yup.object({
-            name: Yup.string()
-                .required('Name must be entered'),
-            manufacturer: Yup.string()
-                .required('Name must be entered'),
-            number: Yup.string()
-                .required('Name must be entered'),
-        }),
-        onSubmit: values => {
-            let data = {};
-            data.name = values.name;
-            data.manufacturer = values.manufacturer;
-            data.number = values.number;
-            data.purchase = radioValue;
-            setActiveStep(3);
-            setDisabled({
-                firstStep: true,
-                secondStep: false,
-                thirdStep: true,
-            });
-            localStorage.setItem(productData, JSON.stringify(data))
-        },
-    });
-    
-
     function shipmentByPlane () {
         chooseShipment(true, false, false);
         paintButton(planeBtnOrange, seaBtn, carBtn);
@@ -292,6 +286,7 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         chooseShipment(false, false, true);
         paintButton(planeBtn, seaBtn, carBtnOrange);
     }
+
     function paymentByCard () {
         choosePayment(true, false, false);
         paintPayButton(cardBtnOrange, paypalBtn, cashBtn);
@@ -337,6 +332,7 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         setSeaButtonPic(sea);
         setCarButtonPic(car);
     }
+
     function choosePayment(card, paypal, cash) {
         setPaymentMethod({
             card: card,
@@ -407,7 +403,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
             });
         }
     }
-
     function closeMovingWindow () {
         closeMoveModal();
         setActiveStep(1);
@@ -422,7 +417,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
         choosePayment(false, false, false);
         paintPayButton(cardBtn, paypalBtn, cashBtn);
     }
-
     function goToLastMovingStep() {
         if (shipmentMethod.plane || shipmentMethod.sea || shipmentMethod.car) {
             let way = ''
@@ -442,7 +436,6 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
             localStorage.setItem(newWayToTransfer, way);
         }
     }
-
     function finishMoving() {
         if (paymentMethod.card || paymentMethod.paypal || paymentMethod.cash) {
             moveToNewStore();
@@ -452,6 +445,7 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
             func(0, false)
         }
     }
+
     function moveToNewStore() {
         let listOfAll = JSON.parse(localStorage.getItem(warehouses));
         const listOfChecked = listOfAll[id].products.filter((item) => item.checked);

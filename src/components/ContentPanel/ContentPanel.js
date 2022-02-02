@@ -1,6 +1,8 @@
 import React from 'react';
+
 import {Button} from '../Button/Button';
 import {DropdownButton} from '../DropdownButton/DropdownButton';
+
 import './ContentPanel.scss';
 
 export const ContentPanel = ({title, containButtons, buttonStyles, buttonText, buttonFunc}) => {

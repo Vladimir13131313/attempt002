@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
-import './Modal.scss';
-import { styled, Modal } from "@mui/material";
-import closeButton from '../../assets/images/close.png'
 
+import { styled, Modal } from "@mui/material";
+
+import closeButton from '../../assets/images/close.png'
+import './Modal.scss';
 
 export const ModalWindow = ({open, close, children}) => {
 

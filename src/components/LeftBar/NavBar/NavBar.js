@@ -1,20 +1,22 @@
 import React, {useEffect, useState} from 'react';
-import './NavBar.scss'
+import {useNavigate} from "react-router-dom";
+
 import {NavItem} from './NavItem/NavItem';
+
+import './NavBar.scss'
 import home from '../../../assets/images/Home.svg';
 import warehouse from '../../../assets/images/Document.svg';
 import account from '../../../assets/images/Category.svg';
 import cards from '../../../assets/images/Chart.svg';
 import contacts from '../../../assets/images/2 User.svg';
 import chat from '../../../assets/images/Chat.svg';
-
 import homeSelected from '../../../assets/images/HomeSelected.svg';
 import warehouseSelected from '../../../assets/images/DocumentSelected.svg';
 import accountSelected from '../../../assets/images/CategorySelected.svg';
 import cardSelected from '../../../assets/images/ChartSelected.svg';
 import contactSelected from '../../../assets/images/AccountSelected.svg';
 import chatSelected from '../../../assets/images/ChatSelected.svg';
-import {useNavigate} from "react-router-dom";
+
 
 
 export const NavBar = ({closeDownBar}) => {
@@ -24,7 +26,6 @@ export const NavBar = ({closeDownBar}) => {
     const [cardIcon, setCardIcon] = useState(cards);
     const [contactIcon, setContactIcon] = useState(contacts);
     const [chatIcon, setChatIcon] = useState(chat);
-
     const [selectedHome, setSelectedHome] = useState(false);
     const [selectedWarehouse, setSelectedWarehouse] = useState(false);
     const [selectedAccount, setSelectedAccount] = useState(false);

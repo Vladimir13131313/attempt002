@@ -1,5 +1,7 @@
-import './App.css';
 import {useState} from 'react'
+
+import './App.css';
+
 import { Routes, Route, Link, Navigate } from 'react-router-dom';
 import {Homepage} from "./components/Homepage";
 import {MainContent} from './components/MainContent/MainContent';
@@ -13,7 +15,8 @@ function App() {
     const [quantity, setQuantity] = useState();
     const [storeId, setStoreId] = useState();
     const [contentList, setContentList] = useState([]);
-    const [moveModal, setMoveModal] = useState(false)
+    const [moveModal, setMoveModal] = useState(false);
+
     function openCloseDownBar(quan, downbar) {
         setDownBar(downbar);
         setQuantity(quan)

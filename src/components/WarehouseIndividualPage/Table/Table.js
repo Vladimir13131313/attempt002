@@ -1,4 +1,5 @@
 import React from 'react';
+
 import square from '../../../assets/images/Rectangle 1384.svg';
 import checkedSquare from '../../../assets/images/check.svg'
 

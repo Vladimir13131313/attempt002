@@ -1,9 +1,12 @@
 import React, {useState, useEffect} from 'react';
-import './MoveCargoForm.scss';
+
 import {Button} from '../../Button/Button';
 import {FormInput} from '../../Input/FormInput';
 import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
+
+import './MoveCargoForm.scss';
+
 
 export const MoveCargoForm = ({currentWarehouse, comboboxValue, setComboboxValue, inputValue, setInputValue, func}) => {
     const [warehousesList, setWarehousesList] = useState([]);

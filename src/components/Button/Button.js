@@ -1,9 +1,10 @@
 import React from 'react';
+
 import './Button.scss'
 
-export const Button = ({ style, name, func, btnType }) => {
+export const Button = ({ style, name, func, btnType="button" }) => {
     return (
-        <button type={btnType || "button"} className={style} onClick={func}>{name}</button>
+        <button type={btnType} className={style} onClick={func}>{name}</button>
     );
 };
 

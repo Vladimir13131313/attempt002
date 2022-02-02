@@ -1,8 +1,10 @@
 import React from 'react';
-import './AddCargoForm.scss';
+
 import {FormInput} from '../../Input/FormInput';
 import {Button} from '../../Button/Button'
 import {RadioButton} from './RadioButton/RadioButton'
+
+import './AddCargoForm.scss';
 
 export const AddCargoForm = ({buttonTitle, formik, radio, radioChange}) => {
 

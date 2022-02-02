@@ -1,13 +1,21 @@
 import React, {useState} from 'react';
-import './AuthForm.scss';
+
 import {FormInput} from "../Input/FormInput";
 import {Button} from "../Button/Button";
 
+import './AuthForm.scss';
+
 export const AuthForm = (
-    {formHeader, haveAcc, whereTo, openOtherForm, btnAction,
-        emailName, passwordName, formik
-    }
-) => {
+    {
+        formHeader,
+        haveAcc,
+        whereTo,
+        openOtherForm,
+        btnAction,
+        emailName,
+        passwordName,
+        formik
+    }) => {
     
     return (
         <form onSubmit={formik.handleSubmit}>
@@ -25,6 +33,9 @@ export const AuthForm = (
                 inputBlur={formik.handleBlur}
                 error={formik.errors}
             />
+            {formik.touched.email && formik.errors.email ? (
+                <div className="label_form error_label">{formik.errors.email}</div>
+            ) : null}
             <FormInput
                 labelTxt="Password"
                 inputType="password"
@@ -35,9 +46,6 @@ export const AuthForm = (
                 inputBlur={formik.handleBlur}
                 error={formik.errors}
             />
-            {formik.touched.email && formik.errors.email ? (
-                <div className="label_form error_label">{formik.errors.email}</div>
-            ) : null}
             {formik.touched.password && formik.errors.password ? (
                 <div className="label_form error_label">{formik.errors.password}</div>
             ) : null}

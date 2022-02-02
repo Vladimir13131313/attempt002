@@ -1,4 +1,5 @@
 import React from 'react';
+
 import square from '../../../assets/images/Rectangle 1384.svg'
 
 export const Table = ({headerList, contentList, navigate, check}) => {

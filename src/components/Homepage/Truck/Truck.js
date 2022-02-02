@@ -1,4 +1,5 @@
 import React from 'react';
+
 import truck from '../../../assets/images/track.png';
 import './Truck.scss';
 

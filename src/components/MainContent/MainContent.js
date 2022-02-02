@@ -1,10 +1,23 @@
 import React, {useEffect} from 'react';
+
 import {LeftBar} from '../LeftBar/LeftBar'
 import {SearchBar} from '../SearchBar/SearchBar'
-import './MainContent.scss'
 import {DownBar} from "./DownBar/DownBar";
 
-export const MainContent = ({children, func, downBar, quantity, storeId, setContentList, openMoveModal, closeDownBar}) => {
+import './MainContent.scss'
+
+
+export const MainContent = (
+    {
+        children,
+        func,
+        downBar,
+        quantity,
+        storeId,
+        setContentList,
+        openMoveModal,
+        closeDownBar
+    }) => {
 
 
     return (

@@ -1,7 +1,9 @@
 import React from 'react';
-import './ChosingMethodForm.scss';
+
 import {Button} from '../Button/Button';
-import {ButtonForChoosing} from './ButtonForChoosing/ButtonForChoosing'
+import {ButtonForChoosing} from './ButtonForChoosing/ButtonForChoosing';
+
+import './ChosingMethodForm.scss';
 
 export const ChoosingMethodForm = ({buttonList, ActBtnName, ActBtnFunc, labelTxt}) => {
     return (

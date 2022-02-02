@@ -1,67 +1,32 @@
 import React, {useState, useEffect} from 'react';
+import { useNavigate } from 'react-router-dom';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
 import {Table} from './Table/Table';
 import {ContentPanel} from '../ContentPanel/ContentPanel';
 import {ModalWindow} from '../Modals/Modal';
 import {AddForm} from './AddForm/AddForm';
 import {SuccessForm} from '../SuccessForm/SuccessForm';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+
 import successPic from '../../assets/images/Group 36552.png';
-import { useNavigate } from 'react-router-dom';
+
 
 export const WarehousePage = () => {
     const [openModal, setOpenModal] = useState(false);
     const [successModal, setSuccessModal] = useState(false);
-    const warehousesList = "warehouses";
-    const [listOfWarehouses, setListOfWarehouses] = useState([]) ;
+    const [listOfWarehouses, setListOfWarehouses] = useState([]);
+
     const navigation = useNavigate();
 
-
-    useEffect(() => {
-        updateProductsNumber();
-        getTableList();
-    }, []);
-
-    function getTableList () {
-        let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
-        setListOfWarehouses(listOfObjects);
-        // if (listOfObjects) {
-        //     let AllList = []
-        //     listOfObjects.forEach(obj => {
-        //         let list = [
-        //             obj.name, obj.number, obj.length, obj.width, obj.height
-        //         ]
-        //         AllList.push(list);
-        //     });
-        //     setListOfWarehouses(AllList);
-        // }
-    }
-
-    function updateProductsNumber() {
-        let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
-        if (listOfObjects) {
-            listOfObjects.forEach(obj => {
-                if (obj.products) {
-                    obj.number = obj.products.length;
-                }
-            })
-        }
-        localStorage.setItem(warehousesList, JSON.stringify(listOfObjects));
-    }
-
-    function closeModal () {
-        setOpenModal(false);
-        formik.resetForm();
-    }
-    function openModalWindow () {
-        setOpenModal(true)
-    }
-    function openSuccessModal () {
-        setSuccessModal(true);
-    }
-    function closeSuccessModal () {
-        setSuccessModal(false);
-    }
+    const warehousesList = "warehouses";
+    const headers = [
+        "All stores",
+        "Number of products",
+        "Length, m",
+        "Width, m",
+        "Height, m"
+    ]
 
     const formik = useFormik({
         initialValues: {
@@ -98,13 +63,45 @@ export const WarehousePage = () => {
         },
     });
 
-    const headers = [
-        "All stores",
-        "Number of products",
-        "Length, m",
-        "Width, m",
-        "Height, m"
-    ]
+    useEffect(() => {
+        updateProductsNumber();
+        getTableList();
+    }, []);
+
+    function getTableList () {
+        let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
+        setListOfWarehouses(listOfObjects);
+    }
+
+    function updateProductsNumber() {
+        let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
+        if (listOfObjects) {
+            listOfObjects.forEach(obj => {
+                if (obj.products) {
+                    obj.number = obj.products.length;
+                }
+            })
+        }
+        localStorage.setItem(warehousesList, JSON.stringify(listOfObjects));
+    }
+
+    function closeModal () {
+        setOpenModal(false);
+        formik.resetForm();
+    }
+    function openModalWindow () {
+        setOpenModal(true)
+    }
+    function openSuccessModal () {
+        setSuccessModal(true);
+    }
+    function closeSuccessModal () {
+        setSuccessModal(false);
+    }
+
+
+
+
 
     function navigate(event, id) {
         if (event.target.tagName !== "IMG") {

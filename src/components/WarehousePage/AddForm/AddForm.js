@@ -1,7 +1,9 @@
 import React from 'react';
-import './AddForm.scss';
+
 import {FormInput} from '../../Input/FormInput';
 import {Button} from '../../Button/Button'
+
+import './AddForm.scss';
 
 export const AddForm = ({formHeader, buttonTitle, formik}) => {
 

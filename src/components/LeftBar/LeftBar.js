@@ -1,7 +1,9 @@
 import React from 'react';
-import './LeftBar.scss'
+
 import {Logo} from '../Logo/Logo';
 import {NavBar} from './NavBar/NavBar'
+
+import './LeftBar.scss'
 
 export const LeftBar = ({closeDownBar}) => {
     return (

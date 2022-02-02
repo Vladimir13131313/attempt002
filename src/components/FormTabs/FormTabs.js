@@ -1,9 +1,11 @@
 import React from 'react';
-import './FormTabs.scss';
+
 import TabsUnstyled from '@mui/base/TabsUnstyled';
 import TabsListUnstyled from '@mui/base/TabsListUnstyled';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import TabUnstyled from '@mui/base/TabUnstyled';
+
+import './FormTabs.scss';
 
 export const FormTabs = ({title, children, currentValue, disability}) => {
     return (

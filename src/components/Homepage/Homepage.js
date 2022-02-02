@@ -1,14 +1,15 @@
 import React, {useState} from "react";
-import './Homepage.scss';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+
 import {InfoPart} from "./InfoPart/InfoPart";
 import { useNavigate } from 'react-router-dom';
 import LogInPart from "./LogInPart/LogInPart";
 import {ModalWindow} from "../Modals";
 import {AuthForm} from "../Forms/authForm";
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import {Truck} from "./Truck/Truck";
 
+import './Homepage.scss';
 
 export const Homepage = ({func}) => {
     const [openModalLogin, setOpenModalLogin] = useState(false);

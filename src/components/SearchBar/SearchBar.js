@@ -1,5 +1,7 @@
 import React from 'react';
+
 import {Search} from './Search/Search';
+
 import profile from '../../assets/images/Profile.svg';
 import setting from '../../assets/images/Setting.svg';
 import notification from '../../assets/images/Notification.svg';

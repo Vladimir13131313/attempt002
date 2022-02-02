@@ -1,6 +1,8 @@
 import React from 'react';
+
 import {TopBar} from "./TopBar/TopBar";
-import {MainContent} from "./MainContent/MainContent";
+import {MainContent} from "./MainContent/MainContent"
+
 import './InfoPart.scss';
 
 export const InfoPart = () => {

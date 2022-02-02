@@ -1,4 +1,5 @@
 import React from 'react';
+
 import './DownBar.scss';
 import {Button} from "../../Button/Button";
 
