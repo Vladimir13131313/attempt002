@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="61807a35-8343-4962-9309-4faa44778e79" name="Changes" comment="commit">
+      <change afterPath="$PROJECT_DIR$/src/assets/images/carBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cardBtn.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/cashBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/planeBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/assets/images/seaBtnOrange.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ChoosingMethodForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/ChosingMethodForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ChosingMethodForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/ContentPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/ContentPanel.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/ContentPanel/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/DropdownButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/DropdownButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/DropdownButton/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/FormTabs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/FormTabs.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/FormTabs/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/StepperForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/StepperForm/StepperForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/SuccessForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/SuccessForm/SuccessForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Table/Table.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/RadioButton.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/RadioButton/RadioButton.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/Index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/AddForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/AddForm.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/WarehousePage/AddForm/Index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Button/Button.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Button/Button.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Forms/AuthForm.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Forms/AuthForm.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Homepage/Homepage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Homepage/Homepage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/LeftBar/NavBar/NavItem/NavItem.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainContent/MainContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/MainContent/MainContent.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MainContent/MainContent.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/SearchBar/SearchBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/WarehousePage/WarehousePage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/WarehousePage/WarehousePage.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="homepage" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/components/ChosingMethodForm/ButtonForChoosing/ButtonForChoosing.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WarehouseIndividualPage/AddCargoForm/AddCargoForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/WarehouseIndividualPage/WarehouseIndividualPage.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/ChosingMethodForm/ChoosingMethodForm.js" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/components/Button/Button.js" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="23zrfJVDVxprqn2DerR8dN71eEM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../attempt1" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="advanced.settings" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/assets/images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/components/Homepage/InfoPart" />
+      <recent name="$PROJECT_DIR$/src/components/Homepage/TopBar" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="61807a35-8343-4962-9309-4faa44778e79" name="Changes" comment="" />
+      <created>1642747858760</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1642747858760</updated>
+      <workItem from="1642747859881" duration="27857000" />
+      <workItem from="1642784215666" duration="34000" />
+      <workItem from="1643008218463" duration="20449000" />
+      <workItem from="1643039780013" duration="4000" />
+      <workItem from="1643092869585" duration="29322000" />
+      <workItem from="1643124713783" duration="2000" />
+      <workItem from="1643124724152" duration="2000" />
+      <workItem from="1643178796356" duration="29674000" />
+    </task>
+    <task id="LOCAL-00001" summary="commit">
+      <created>1642748230796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1642748230796</updated>
+    </task>
+    <task id="LOCAL-00002" summary="commit">
+      <created>1642782890765</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1642782890765</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit" />
+  </component>
+</project>

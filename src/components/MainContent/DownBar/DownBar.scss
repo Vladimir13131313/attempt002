@@ -1,0 +1,49 @@
+.down_bar {
+  width: 100%;
+  height: 10%;
+  box-shadow: 0 -1px 15px rgba(62, 76, 89, 0.04);
+}
+
+.down_bar_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 24px 32px;
+
+}
+
+.move_button {
+  padding: 16px 24px;
+  margin-left: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.delete_button {
+  border: 1px solid #E65232;
+  background-color: transparent;
+  color: #E55232;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  padding: 15px 23px;
+  border-radius: 3px;
+}
+.information {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.selected {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 14px;
+  color: #3E4C59;
+  margin-left: 8px;
+}

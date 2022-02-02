@@ -1,0 +1,203 @@
+.page-with-downbar {
+  width: 100%;
+  height: 90%;
+  min-height: 500px;
+  min-width: 1000px;
+}
+
+.page-without-downbar {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  min-width: 1000px;
+}
+
+.main_container {
+  height: 76.5%;
+  width: 90%;
+  padding: 72px 32px 0 48px;
+}
+
+.window_panel {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+h1 {
+  margin: 0;
+}
+
+.window_title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 36px;
+  color: #3E4C59;
+}
+
+
+
+#sorted_by-button, #products_sort-button {
+  height: 28px;
+  width: 190px;
+  background-color: #ffffff;
+  border: 1px solid #E6E8EA;
+  padding-top: 16px;
+  padding-bottom: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+#products_sort-menu {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+}
+
+.warehouses_list {
+  margin-top: 32px;
+  height: 85%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.warehouses_list::-webkit-scrollbar {
+  width: 8px;
+  background-color: #F7F7F7;
+}
+
+.warehouses_list::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: #D2D2D2;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 12px;
+  color: #3E4C59;
+}
+tr {
+  border-bottom: 1px solid #ECEFF2;
+}
+th:first-child, td:first-child {
+  width: 20px;
+  padding-right: 0;
+  cursor: pointer;
+}
+
+th, td {
+  font-weight: 400;
+  padding: 24px;
+  text-align: left;
+}
+
+
+
+#login_header,
+#cargo_success_header {
+  width: 370px;
+}
+
+.warehouse_pattern {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 26px;
+}
+
+
+
+.radio_buttons {
+  display: flex;
+  flex-direction: row;
+  margin-top: 24px;
+}
+
+.label_payment_method {
+  font-size: 16px;
+  line-height: 16px;
+  margin-bottom: 20px;
+}
+
+.payment_button {
+  background-color: transparent;
+  padding: 0;
+  margin: 12px auto;
+  border: none;
+  cursor: pointer;
+}
+
+.choosing_type {
+  fill-opacity: 1.0;
+  fill: #EE950F;
+}
+
+.choosing_bg {
+  fill: #FEF5E7;
+}
+
+
+
+.strokes {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.select_input {
+  padding: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 3px;
+  border: none;
+}
+
+.select_input:focus {
+  outline: none;
+}
+
+.custom_combobox_size {
+  width: 298px;
+  border: 1px solid #E6E8EA;
+  border-radius: 3px;
+  margin: 8px auto;
+}
+
+.select_button {
+  padding: 0.4em 1em;
+  display: inline-block;
+  position: relative;
+  line-height: normal;
+  margin-right: 0.1em;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: visible;
+}
+
+.select_list {
+  border: 1px solid #E6E8EA;
+  border-radius: 3px;
+  margin-top: 8px;
+  width: 298px;
+  height: 160px;
+  overflow-y: scroll;
+}
+
+.custom_error {
+  background: #fddfdf;
+  color: #5f3f3f;
+}

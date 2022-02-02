@@ -1,0 +1,27 @@
+.log_in_header {
+  width: 100%;
+  margin: auto auto 30px auto;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 48px;
+  text-align: center;
+}
+
+.link_to_reg {
+  margin: 12px auto auto auto;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.link_btn {
+  cursor: pointer;
+  color: #EE950F;
+}
+
+.error_label {
+  color: red;
+}

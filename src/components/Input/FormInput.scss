@@ -1,0 +1,29 @@
+.label_form {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  margin-bottom: 18px;
+}
+
+
+.modal_inputs {
+  width: 262px;
+  padding: 18px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  border-radius: 3px;
+  border: 1px solid #E6E8EA;
+  margin: 8px auto;
+}
+
+.input_block {
+  margin-bottom: 20px;
+}
+
+.error-input {
+  border: 1px solid #f1a899;
+  background: #fddfdf;
+}
