@@ -28,7 +28,13 @@
 .nav_link_selected {
   border-left: 2px solid #EE950F;
   padding-left: 32px;
-  a {
+  div {
     color: #EE950F;
   }
+}
+
+.selected_link_bar {
+  color: #EE950F;
+  border-left: 2px solid #EE950F;
+  padding-left: 32px;
 }

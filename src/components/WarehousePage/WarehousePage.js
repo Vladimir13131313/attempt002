@@ -1,9 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import {Table} from '../Table/Table';
+import {Table} from './Table/Table';
 import {ContentPanel} from '../ContentPanel/ContentPanel';
-import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import {ModalWindow} from '../Modals/Modal';
-import {FormTabs} from '../FormTabs/FormTabs';
 import {AddForm} from './AddForm/AddForm';
 import {SuccessForm} from '../SuccessForm/SuccessForm';
 import { useFormik } from 'formik';
@@ -17,24 +15,38 @@ export const WarehousePage = () => {
     const warehousesList = "warehouses";
     const [listOfWarehouses, setListOfWarehouses] = useState([]) ;
     const navigation = useNavigate();
-    
+
 
     useEffect(() => {
+        updateProductsNumber();
         getTableList();
     }, []);
 
     function getTableList () {
         let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
+        setListOfWarehouses(listOfObjects);
+        // if (listOfObjects) {
+        //     let AllList = []
+        //     listOfObjects.forEach(obj => {
+        //         let list = [
+        //             obj.name, obj.number, obj.length, obj.width, obj.height
+        //         ]
+        //         AllList.push(list);
+        //     });
+        //     setListOfWarehouses(AllList);
+        // }
+    }
+
+    function updateProductsNumber() {
+        let listOfObjects = JSON.parse(localStorage.getItem(warehousesList));
         if (listOfObjects) {
-            let AllList = []
             listOfObjects.forEach(obj => {
-                let list = [
-                    obj.name, obj.number, obj.length, obj.width, obj.height
-                ]
-                AllList.push(list);
-            });
-            setListOfWarehouses(AllList);
+                if (obj.products) {
+                    obj.number = obj.products.length;
+                }
+            })
         }
+        localStorage.setItem(warehousesList, JSON.stringify(listOfObjects));
     }
 
     function closeModal () {
@@ -93,11 +105,11 @@ export const WarehousePage = () => {
         "Width, m",
         "Height, m"
     ]
-    
+
     function navigate(event, id) {
         if (event.target.tagName !== "IMG") {
             navigation(`/stores/${id}`)
-        } 
+        }
     }
     function check() {}
 

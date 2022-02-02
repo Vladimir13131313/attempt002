@@ -1,8 +1,17 @@
+.page-with-downbar {
+  width: 100%;
+  height: 90%;
+  min-height: 500px;
+  min-width: 1000px;
+}
 
-/* ----main bar---- */
+.page-without-downbar {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  min-width: 1000px;
+}
 
-
-/* ----main container---- */
 .main_container {
   height: 76.5%;
   width: 90%;
@@ -89,9 +98,7 @@ th, td {
   text-align: left;
 }
 
-.common_button:focus {
-  outline: none;
-}
+
 
 #login_header,
 #cargo_success_header {
@@ -105,81 +112,7 @@ th, td {
   padding-bottom: 26px;
 }
 
-#sorted_by-menu {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-}
 
-.selected_link_bar {
-  color: #EE950F;
-  border-left: 2px solid #EE950F;
-  padding-left: 32px;
-}
-
-.change_color {
-  stroke: #EE950F;
-  stroke-opacity: 1.0;
-}
-
-.change_opacity {
-  opacity: 1.0;
-}
-
-#steps_cargo_adding,
-#moving_steps {
-  border: none;
-}
-
-.ui-tabs .ui-tabs-nav {
-  background-color: transparent;
-  border: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-#ui-id-3, #ui-id-4,
-#ui-id-5, #ui-id-6, #ui-id-7, #ui-id-8,
-#ui-id-9, #ui-id-10, #ui-id-11, #ui-id-12,
-#ui-id-13 {
-  cursor: pointer;
-  padding: 10px 12.6px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.ui-tabs .ui-tabs-nav li.ui-tabs-active {
-  margin: 0;
-  padding: 0;
-}
-
-#first, #second, #third,
-#first_for_moving, #second_for_moving, #third_for_moving {
-  margin: 10px 8px 40px 8px;
-  padding: 0;
-  border: none;
-  border-radius: 16px;
-  background-color: transparent;
-}
-
-.line {
-  width: 39px;
-}
-
-.line_between_tabs {
-  margin: 25.5px 0;
-  border-bottom: 1px solid #E6E8EA;
-}
-
-.ui-state-active a {
-  background: #EE950F;
-  border-radius: 16px;
-  border: none;
-}
 
 .radio_buttons {
   display: flex;
@@ -210,123 +143,7 @@ th, td {
   fill: #FEF5E7;
 }
 
-/* для элемента input c type="radio" */
-.custom-radio {
-  position: absolute;
-  z-index: -1;
-  opacity: 0;
-}
 
-/* для элемента label связанного с .custom-radio */
-.custom-radio+label {
-  display: inline-flex;
-  align-items: center;
-  user-select: none;
-}
-
-/* создание в label псевдоэлемента  before со следующими стилями */
-.custom-radio+label::after {
-  content: '';
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  flex-shrink: 0;
-  flex-grow: 0;
-  border: 1px solid #adb5bd;
-  border-radius: 50%;
-  margin-right: 24px;
-  margin-left: 8px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: 50% 50%;
-}
-
-/* стили при наведении курсора на радио */
-.custom-radio:not(:disabled):not(:checked)+label:hover::after {
-  border-color: #b3d7ff;
-}
-
-/* стили для активной радиокнопки (при нажатии на неё) */
-.custom-radio:not(:disabled):active+label::after {
-  background-color: #b3d7ff;
-  border-color: #b3d7ff;
-}
-
-
-
-/* стили для радиокнопки, находящейся в фокусе и не находящейся в состоянии checked */
-.custom-radio:focus:not(:checked)+label::after {
-  border-color: #80bdff;
-}
-
-/* стили для радиокнопки, находящейся в состоянии checked */
-.custom-radio:checked+label::after {
-  border: 1px solid #E6E8EA;
-  background-color: #ffffff;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='%23EE950F'/%3e%3c/svg%3e");
-}
-
-/* стили для радиокнопки, находящейся в состоянии disabled */
-.custom-radio:disabled+label::after {
-  background-color: #e9ecef;
-}
-
-.label_for_radio {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 14px;
-}
-
-.down_bar {
-  width: 100%;
-  height: 12%;
-  box-shadow: 0 -1px 15px rgba(62, 76, 89, 0.04);
-}
-
-.down_bar_content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 24px 32px;
-
-}
-
-.move_button {
-  padding: 16px 24px;
-  margin-left: 16px;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 12px;
-}
-
-.delete_button {
-  border: 1px solid #E65232;
-  background-color: transparent;
-  color: #E55232;
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 12px;
-  padding: 15px 23px;
-  border-radius: 3px;
-}
-.information {
-  margin-top: auto;
-  margin-bottom: auto;
-  display: flex;
-  flex-direction: row;
-}
-
-.selected {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 14px;
-  color: #3E4C59;
-  margin-left: 8px;
-}
 
 .strokes {
   display: flex;

@@ -56,13 +56,16 @@ export const Homepage = ({func}) => {
                 .required('Password must be entered'),
         }),
         onSubmit: values => {
-            func()
+
             if (openModalSignup) {
                 localStorage.setItem(person, JSON.stringify({email: values.email, password: values.password}));
+                closeSignup()
+                openLogin()
             } else if (openModalLogin) {
                 let checkPerson = JSON.parse(localStorage.getItem(person));
                 if (values.email === checkPerson.email) {
                     if (values.password === checkPerson.password) {
+                        func()
                         navigate("/stores")
                     }
                 }

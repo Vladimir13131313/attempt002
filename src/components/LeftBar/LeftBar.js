@@ -3,13 +3,13 @@ import './LeftBar.scss'
 import {Logo} from '../Logo/Logo';
 import {NavBar} from './NavBar/NavBar'
 
-export const LeftBar = () => {
+export const LeftBar = ({closeDownBar}) => {
     return (
         <div className="left_bar">
             <div className="logo_place">
                 <Logo/>
             </div>
-            <NavBar/>
+            <NavBar closeDownBar={closeDownBar}/>
         </div>
     );
 };

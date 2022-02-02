@@ -3,7 +3,7 @@ import './FormInput.scss';
 
 export const FormInput = (
     {labelTxt, plcHolder, inputType, inputValue, setInputValue,
-        inputName, inputBlur, error
+        inputName, inputBlur, error, readOnly,
     }
 ) => {
     return (
@@ -17,6 +17,7 @@ export const FormInput = (
                 className={error[inputName]? "error-input input_form modal_inputs" : " input_form modal_inputs"}
                 name={inputName}
                 placeholder={plcHolder}
+                readOnly={readOnly}
             />
         </div>
     );

@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
-import {Table} from '../Table/Table';
+import {Table} from './Table/Table';
 import {ContentPanel} from '../ContentPanel/ContentPanel';
 import TabPanelUnstyled from '@mui/base/TabPanelUnstyled';
 import {ModalWindow} from '../Modals/Modal';
@@ -8,8 +8,8 @@ import {SuccessForm} from '../SuccessForm/SuccessForm';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import successPic from '../../assets/images/success_cargo.png';
-import { useNavigate } from 'react-router-dom';
-import {StepperForm} from '../StepperForm/StepperForm';
+import {MoveCargoForm} from './MoveCargoForm/MoveCargoForm';
+
 import {FormTabs} from'../FormTabs/FormTabs';
 import {AddCargoForm} from './AddCargoForm/AddCargoForm';
 import {ChoosingMethodForm} from '../ChosingMethodForm/ChoosingMethodForm';
@@ -25,21 +25,28 @@ import paypalBtn from '../../assets/images/paypalBtn.svg';
 import paypalBtnOrange from '../../assets/images/paypalBtnOrange.svg';
 import cashBtn from '../../assets/images/cashBtn.svg';
 import cashBtnOrange from '../../assets/images/cashBtnOrange.svg';
+import planePic from '../../assets/images/Group 36487.svg';
+import shipPic from '../../assets/images/Group 36486.svg';
+import carPic from '../../assets/images/Group 36485.svg'
+import movingCargoPic from '../../assets/images/moving_cargo_pattern.png'
 
 
 
-export const WarehouseIndividualPage = () => {
-    const [openModal, setOpenModal] = useState(false)
+export const WarehouseIndividualPage = ({func, setId, contentList, setContentList, openMoveModal, closeMoveModal}) => {
+    const [openModal, setOpenModal] = useState(false);
     const [successModal, setSuccessModal] = useState(false);
+    const [successfullyMoved, setSuccessfullyMoved] = useState(false)
     const [activeStep, setActiveStep] = useState(1);
     const [radioValue, setRadioValue] = useState("A");
-    const [contentList, setContentList] = useState([])
+    const [comboboxValue, setComboboxValue] = useState('');
+    const [inputValue, setInputValue] = useState('');
     const [planeButtonPic, setPlaneButtonPic] = useState(planeBtn);
     const [seaButtonPic, setSeaButtonPic] = useState(seaBtn);
     const [carButtonPic, setCarButtonPic] = useState(carBtn);
     const [cardButtonPic, setCardButtonPic] = useState(cardBtn);
     const [paypalButtonPic, setPaypalButtonPic] = useState(paypalBtn);
     const [cashButtonPic, setCashButtonPic] = useState(cashBtn);
+    const [allChecked, setAllChecked] = useState(false);
     const [disabled, setDisabled] = useState({
         firstStep: false,
         secondStep: true,
@@ -87,9 +94,12 @@ export const WarehouseIndividualPage = () => {
     const warehouses = "warehouses"
     let allWarehouses = [];
     const productData = 'product data';
+    const newWayToTransfer = "new way to transfer"
 
     useEffect(() => {
+        uncheckAll();
         parseProductList();
+        setId(id);
     }, [])
 
     function processData () {
@@ -98,22 +108,13 @@ export const WarehouseIndividualPage = () => {
 
     processData();
 
+
     const headers = [
         "All products",
         "Manufacturer",
         "Item number",
         "Purchasing technology",
         "Shipment method"
-    ]
-
-    const trainingList = [
-        [
-            "All products",
-            "Manufacturer",
-            "Item number",
-            "Purchasing technology",
-            "Shipment method"
-        ]
     ]
 
     const formTitles = [
@@ -129,6 +130,8 @@ export const WarehouseIndividualPage = () => {
         setOpenModal(false);
         chooseShipment(false, false, false);
         paintButton(planeBtn, seaBtn, carBtn);
+        choosePayment(false, false, false);
+        paintPayButton(cardBtn, paypalBtn, cashBtn);
         setRadioValue("A");
         setActiveStep(1)
         setDisabled({
@@ -144,6 +147,12 @@ export const WarehouseIndividualPage = () => {
     function closeSuccessModal() {
         setSuccessModal(false)
     }
+    function openSuccessfullyMovedModal() {
+        setSuccessfullyMoved(true);
+    }
+    function closeSuccessfullyMovedModal() {
+        setSuccessfullyMoved(false)
+    }
 
     function titleNumber () {
         switch (activeStep) {
@@ -158,7 +167,87 @@ export const WarehouseIndividualPage = () => {
 
     function navigate() {}
 
-    function check() {}
+    function check(productId) {
+        let listOfAll = JSON.parse(localStorage.getItem(warehouses));
+        listOfAll[id].products[productId].checked = !listOfAll[id].products[productId].checked
+        localStorage.setItem(warehouses, JSON.stringify(listOfAll));
+        const count = countChecked();
+        if (count.len === count.current) {
+            setAllChecked(true);
+        } else {
+            setAllChecked(false);
+        }
+        if (!count.current) {
+            openPanel(false);
+        } else {
+            openPanel(true);
+        }
+        parseProductList();
+
+    }
+
+    function checkAll() {
+        let listOfAll = JSON.parse(localStorage.getItem(warehouses));
+        if (listOfAll[id].products.length !== 0) {
+            if (allChecked) {
+                if (listOfAll[id].products) {
+                    listOfAll[id].products.forEach(prod => {
+                        prod.checked = false;
+                    });
+
+                    localStorage.setItem(warehouses, JSON.stringify(listOfAll));
+                    setAllChecked(false)
+                    openPanel(false);
+                }
+
+            } else {
+                if (listOfAll[id].products) {
+                    listOfAll[id].products.forEach(prod => {
+                        prod.checked = true;
+                    });
+
+                    localStorage.setItem(warehouses, JSON.stringify(listOfAll));
+                    setAllChecked(true);
+                    openPanel(true)
+                }
+
+            }
+
+            parseProductList();
+        }
+    }
+
+    function countChecked() {
+        let listOfAll = JSON.parse(localStorage.getItem(warehouses));
+        let count = 0;
+        if (listOfAll[id].products) {
+            listOfAll[id].products.forEach(prod => {
+                if (prod.checked) {
+                    count++;
+                }
+            });
+            return {len: listOfAll[id].products.length, current: count}
+        }
+        return {len: 0, current: count}
+    }
+
+    function openPanel(open) {
+        const count = countChecked();
+        func(count.current, open)
+    }
+
+    function uncheckAll() {
+        let listOfAll = JSON.parse(localStorage.getItem(warehouses));
+        if (listOfAll[id].products) {
+            listOfAll[id].products.forEach(prod => {
+                prod.checked = false;
+            });
+
+            localStorage.setItem(warehouses, JSON.stringify(listOfAll));
+            setAllChecked(false)
+            openPanel(false);
+        }
+    }
 
     const formik = useFormik({
         initialValues: {
@@ -189,6 +278,7 @@ export const WarehouseIndividualPage = () => {
             localStorage.setItem(productData, JSON.stringify(data))
         },
     });
+    
 
     function shipmentByPlane () {
         chooseShipment(true, false, false);
@@ -264,7 +354,7 @@ export const WarehouseIndividualPage = () => {
         if (paymentMethod.card || paymentMethod.paypal || paymentMethod.cash) {
             updateProductList();
             parseProductList();
-            closeModal();
+            closeModal()
             openSuccessModal();
         }
     }
@@ -286,24 +376,98 @@ export const WarehouseIndividualPage = () => {
             listOfProducts.forEach(product => {
                 let pic = '';
                 if (product.shipment === "plane"){
-                    pic = "подменить картинкой самолета";
+                    pic = planePic;
                 } else if (product.shipment === "sea") {
-                    pic = "подменить картинкой корабля";
+                    pic = shipPic;
                 } else if (product.shipment === "car") {
-                    pic = "подменить картинкой грузовика"
+                    pic = carPic;
                 }
-                listOfLists.push([
-                    product.name,
-                    product.manufacturer,
-                    product.number,
-                    product.purchase,
-                    pic,
-                ])
+                listOfLists.push({
+                    name: product.name,
+                    man: product.manufacturer,
+                    number: product.number,
+                    purch: product.purchase,
+                    checked: product.checked || false,
+                    shipment: pic,
+                })
             })
-            setContentList(listOfLists);
+
+        }
+        setContentList(listOfLists);
+    }
+
+    function firstMovingStep(event) {
+        event.preventDefault();
+        if (Number(id) !== comboboxValue.id) {
+            setActiveStep(3);
+            setDisabled({
+                firstStep: true,
+                secondStep: false,
+                thirdStep: true,
+            });
         }
     }
-    
+
+    function closeMovingWindow () {
+        closeMoveModal();
+        setActiveStep(1);
+        setDisabled({
+            firstStep: false,
+            secondStep: true,
+            thirdStep: true,
+        });
+        setComboboxValue('');
+        chooseShipment(false, false, false);
+        paintButton(planeBtn, seaBtn, carBtn);
+        choosePayment(false, false, false);
+        paintPayButton(cardBtn, paypalBtn, cashBtn);
+    }
+
+    function goToLastMovingStep() {
+        if (shipmentMethod.plane || shipmentMethod.sea || shipmentMethod.car) {
+            let way = ''
+            setActiveStep(5);
+            setDisabled({
+                firstStep: true,
+                secondStep: true,
+                thirdStep: false,
+            });
+            if (shipmentMethod.plane) {
+                way = "plane"
+            } else if (shipmentMethod.sea) {
+                way = "sea"
+            } else if (shipmentMethod.car) {
+                way = "car"
+            }
+            localStorage.setItem(newWayToTransfer, way);
+        }
+    }
+
+    function finishMoving() {
+        if (paymentMethod.card || paymentMethod.paypal || paymentMethod.cash) {
+            moveToNewStore();
+            closeMovingWindow();
+            openSuccessfullyMovedModal();
+            setAllChecked(false);
+            func(0, false)
+        }
+    }
+    function moveToNewStore() {
+        let listOfAll = JSON.parse(localStorage.getItem(warehouses));
+        const listOfChecked = listOfAll[id].products.filter((item) => item.checked);
+        listOfAll[id].products = listOfAll[id].products.filter((item) => !item.checked);
+        if (listOfAll[comboboxValue.id].products) {
+            listOfChecked.forEach(item => {
+                listOfAll[comboboxValue.id].products.push(item);
+            })
+        } else {
+            listOfAll[comboboxValue.id].products = listOfChecked;
+        }
+
+        localStorage.setItem(warehouses, JSON.stringify(listOfAll));
+        parseProductList();
+    }
+
     return (
         <div>
             <ContentPanel
@@ -313,7 +477,7 @@ export const WarehouseIndividualPage = () => {
                 buttonText="Add cargo + "
                 buttonFunc={openModalWindow}
             />
-            <Table headerList={headers} contentList={contentList} navigate={navigate} check={check}/>
+            <Table headerList={headers} contentList={contentList} navigate={navigate} allChecked={allChecked} checkAll={checkAll} check={check}/>
             <ModalWindow open={openModal} close={closeModal}>
                 <FormTabs title={formTitles[titleNumber()]} currentValue={activeStep} disability={disabled}>
                     <TabPanelUnstyled value={1}>
@@ -339,6 +503,39 @@ export const WarehouseIndividualPage = () => {
             </ModalWindow>
             <ModalWindow open={successModal} close={closeSuccessModal} >
                 <SuccessForm mainPic={successPic} header="Cargo was successfully created" btnFunc={closeSuccessModal}/>
+            </ModalWindow>
+            <ModalWindow open={openMoveModal} close={closeMovingWindow}>
+                <FormTabs title="Move cargo" currentValue={activeStep} disability={disabled}>
+                    <TabPanelUnstyled value={1}>
+                        <MoveCargoForm
+                            currentWarehouse={allWarehouses[id].name}
+                            comboboxValue={comboboxValue}
+                            setComboboxValue={setComboboxValue}
+                            func={firstMovingStep}
+                            inputValue={inputValue}
+                            setInputValue={setInputValue}
+                        />
+                    </TabPanelUnstyled>
+                    <TabPanelUnstyled value={3}>
+                        <ChoosingMethodForm
+                            buttonList={shipmentButtonList}
+                            ActBtnName="Next step"
+                            ActBtnFunc={goToLastMovingStep}
+                            labelTxt="Select delivery method"
+                        />
+                    </TabPanelUnstyled>
+                    <TabPanelUnstyled value={5}>
+                        <ChoosingMethodForm
+                            buttonList={paymentButtonList}
+                            ActBtnName="Choose"
+                            ActBtnFunc={finishMoving}
+                            labelTxt="Choose a payment method"
+                        />
+                    </TabPanelUnstyled>
+                </FormTabs>
+            </ModalWindow>
+            <ModalWindow open={successfullyMoved} close={closeSuccessfullyMovedModal} >
+                <SuccessForm mainPic={movingCargoPic} header="Cargo was successfully created" btnFunc={closeSuccessfullyMovedModal}/>
             </ModalWindow>
         </div>
     );
