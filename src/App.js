@@ -16,6 +16,7 @@ function App() {
     const [storeId, setStoreId] = useState();
     const [contentList, setContentList] = useState([]);
     const [moveModal, setMoveModal] = useState(false);
+    const [allChecked, setAllChecked] = useState(false);
 
     function openCloseDownBar(quan, downbar) {
         setDownBar(downbar);
@@ -60,6 +61,7 @@ function App() {
                         storeId={storeId}
                         setContentList={setContentList}
                         openMoveModal={openMoveModal}
+                        setAllChecked={setAllChecked}
                     >
                         <WarehouseIndividualPage
                             func={openCloseDownBar}
@@ -68,6 +70,8 @@ function App() {
                             setContentList={setContentList}
                             openMoveModal={moveModal}
                             closeMoveModal={closeMoveModal}
+                            allChecked={allChecked}
+                            setAllChecked={setAllChecked}
                         />
                     </MainContent>
                     : <Navigate to="/" />}/>

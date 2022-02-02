@@ -9,7 +9,15 @@ import carPic from '../../../assets/images/Group 36485.svg'
 
 
 
-export const DownBar = ({quantity, storeId, setContentList, openMoveModal, closeDownBar}) => {
+export const DownBar = (
+    {
+        quantity,
+        storeId,
+        setContentList,
+        openMoveModal,
+        closeDownBar,
+        setAllChecked
+    }) => {
     const warehouses = "warehouses"
 
     function deleteSelected () {
@@ -17,7 +25,8 @@ export const DownBar = ({quantity, storeId, setContentList, openMoveModal, close
         listOfAll[storeId].products = listOfAll[storeId].products.filter((item) => !item.checked)
         localStorage.setItem(warehouses, JSON.stringify(listOfAll));
         parseProductList();
-        closeDownBar(0, false)
+        closeDownBar(0, false);
+        setAllChecked(false);
     }
 
     function parseProductList() {

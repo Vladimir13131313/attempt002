@@ -16,7 +16,8 @@ export const MainContent = (
         storeId,
         setContentList,
         openMoveModal,
-        closeDownBar
+        closeDownBar,
+        setAllChecked,
     }) => {
 
 
@@ -31,7 +32,14 @@ export const MainContent = (
                     </div>
                 </div>
             </div>
-            {downBar && <DownBar quantity={quantity} storeId={storeId} setContentList={setContentList} openMoveModal={openMoveModal} closeDownBar={closeDownBar}/>}
+            {downBar && <DownBar
+                quantity={quantity}
+                storeId={storeId}
+                setContentList={setContentList}
+                openMoveModal={openMoveModal}
+                closeDownBar={closeDownBar}
+                setAllChecked={setAllChecked}
+            />}
         </div>
 
     );

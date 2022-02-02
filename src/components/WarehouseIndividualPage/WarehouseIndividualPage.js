@@ -32,7 +32,17 @@ import movingCargoPic from '../../assets/images/moving_cargo_pattern.png'
 import successPic from '../../assets/images/success_cargo.png';
 
 
-export const WarehouseIndividualPage = ({func, setId, contentList, setContentList, openMoveModal, closeMoveModal}) => {
+export const WarehouseIndividualPage = (
+    {
+        func,
+        setId,
+        contentList,
+        setContentList,
+        openMoveModal,
+        closeMoveModal,
+        allChecked,
+        setAllChecked,
+    }) => {
     const {id} = useParams();
 
     const [openModal, setOpenModal] = useState(false);
@@ -48,7 +58,7 @@ export const WarehouseIndividualPage = ({func, setId, contentList, setContentLis
     const [cardButtonPic, setCardButtonPic] = useState(cardBtn);
     const [paypalButtonPic, setPaypalButtonPic] = useState(paypalBtn);
     const [cashButtonPic, setCashButtonPic] = useState(cashBtn);
-    const [allChecked, setAllChecked] = useState(false);
+    // const [allChecked, setAllChecked] = useState(false);
     const [disabled, setDisabled] = useState({
         firstStep: false,
         secondStep: true,
